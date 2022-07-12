@@ -22,28 +22,56 @@
               <svg class="logo-leftVector">
                 <use href="./sprites.svg#icon-LeftVector"></use>
               </svg>
+              <svg class="logo-rv">
+                <use href="./sprites.svg#icon-Vector-rignth"></use>
+              </svg>
+              <svg class="logo-lv">
+                <use href="./sprites.svg#icon-Vector-left"></use>
+              </svg>
               <svg class="logo-RignthVector">
                 <use href="./sprites.svg#icon-RignthVector"></use>
               </svg>
-              <a href="./index.html"
-                ><span class="logo-text">DEVELOPERS</span></a
+              <a class="logo-text" href="./index.html"
+                ><span>DEVELOPERS</span></a
               >
             </div>
             <div class="logo-burger">
-              <svg class="logo-ellips" width="40px" height="40px">
-                <use href="./symbol-defs.svg#icon-Ellipse-11"></use>
-              </svg>
-              <svg class="logo-ellips" width="40px" height="40px">
-                <use href="./symbol-defs.svg#icon-Ellipse-11"></use>
-              </svg>
-              <svg class="logo-ellips" width="40px" height="40px">
-                <use href="./symbol-defs.svg#icon-Ellipse-11"></use>
-              </svg>
-              <!-- <button>
-                <div class="ellips"></div>
-                <div class="ellips-two"></div>
-                <div class="ellips-free"></div>
-              </button> -->
+              <button
+                type="button"
+                class="button-mobile"
+                data-menu-button
+                aria-expanded="false"
+                aria-control="mobile-nav"
+              >
+                <svg class="logo-ellips" width="40px" height="40px">
+                  <use href="./symbol-defs.svg#icon-Ellipse-11"></use>
+                </svg>
+                <svg class="logo-ellips" width="40px" height="40px">
+                  <use href="./symbol-defs.svg#icon-Ellipse-11"></use>
+                </svg>
+                <svg class="logo-ellips" width="40px" height="40px">
+                  <use href="./symbol-defs.svg#icon-Ellipse-11"></use>
+                </svg>
+              </button>
+
+              <div class="mobile-nav" id="mobile-nav" data-menu>
+                <nav>
+                  <ul class="mobile-nav-list">
+                    <li class="mobile-nav-item">
+                      <p class="mobile-nav-text nav-current">Услуги</p>
+                    </li>
+                    <li class="mobile-nav-item">
+                      <p class="mobile-nav-text">Портфолио</p>
+                    </li>
+                    <li class="mobile-nav-item">
+                      <p class="mobile-nav-text">Этапы</p>
+                    </li>
+                    <li class="mobile-nav-item">
+                      <p class="mobile-nav-text">Дизайнеры</p>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
           </div>
         </nav>
@@ -177,6 +205,8 @@
             Что входит в услугу по созданию дизайна интернет-магазина?
           </h2>
           <div class="primary-info">
+            <!-- //////////////////////////////1 DIV ////////////////////// -->
+
             <div class="info-item">
               <img
                 class="info-servis-img"
@@ -186,16 +216,39 @@
                 alt="ellips"
               />
               <p class="primary-info-text">Дизайн портала</p>
-              <svg
+              <button
                 type="button"
-                onmousedown="vievDiv()"
-                class="primary-info-svg"
+                class="button-info"
+                data-info-button
+                aria-expanded="false"
+                aria-control="div1"
               >
-                <use href="./symbol-defs.svg#icon-Vector"></use>
-              </svg>
-              <div id="div1" class="info-item-secondary">
-                <p>Дизайн портала</p>
-                <p>
+                <svg data-button class="primary-info-svg">
+                  <use href="./symbol-defs.svg#icon-Vector"></use>
+                </svg>
+              </button>
+              <div id="div1 is-open" data-info class="info-item-secondary">
+                <button
+                  type="button"
+                  class="button-info"
+                  data-button-closed
+                  aria-expanded="false"
+                  aria-control="div1"
+                >
+                  <svg data-button class="primary-info-svg">
+                    <use href="./symbol-defs.svg#icon-Vector"></use>
+                  </svg>
+                </button>
+
+                <div class="inform-div1">
+                  <img
+                    class="inform-div1-img"
+                    src="./images/main/Ellipse5.png"
+                    alt="ellipse5"
+                  />
+                  <p class="info-text-secondary">Дизайн портала</p>
+                </div>
+                <p class="info-paragraph-secondary border">
                   Дизайн портала — это оформление контента, совокупность всех
                   графических элементов на веб-странице. Основная задача дизайна
                   — познакомить пользователя со страницей. Продуманный дизайн
@@ -203,6 +256,9 @@
                 </p>
               </div>
             </div>
+
+            <!-- //////////////////////////////1 DIV END END END////////////////////// -->
+            <!-- /////////////////////////////////// 2 DIV START////////////////// -->
             <div class="info-item">
               <img
                 class="info-servis-img"
@@ -214,10 +270,51 @@
               <p class="primary-info-text">
                 Дизайн адаптивной мобильной версии
               </p>
-              <svg class="primary-info-svg">
-                <use href="./symbol-defs.svg#icon-Vector"></use>
-              </svg>
+              <button
+                type="button"
+                class="button-info"
+                data-info-button2
+                aria-expanded="false"
+                aria-control="div2"
+              >
+                <svg data-button class="primary-info-svg">
+                  <use href="./symbol-defs.svg#icon-Vector"></use>
+                </svg>
+              </button>
+              <div id="div2 is-open" data-info2 class="info-item-secondary">
+                <button
+                  type="button"
+                  class="button-info"
+                  data-button2-closed
+                  aria-expanded="false"
+                  aria-control="div2"
+                >
+                  <svg data-button class="primary-info-svg">
+                    <use href="./symbol-defs.svg#icon-Vector"></use>
+                  </svg>
+                </button>
+
+                <div class="inform-div2">
+                  <img
+                    class="inform-div2-img"
+                    src="./images/main/Ellipse5.png"
+                    alt="ellipse5"
+                  />
+                  <p class="info-text-secondary">
+                    Дизайн адаптивной мобильной версии
+                  </p>
+                </div>
+                <p class="info-paragraph-secondary border">
+                  Мобильная версия сайта удобна для пользователя, потому что
+                  сильно упрощена по сравнению с обычной версией. Мобильная
+                  версия позволяет совершать заказ/покупку с минимумом действий.
+                  При адаптивной версии вся структура сайта автоматически
+                  подстраивается под различную ширину экрана.
+                </p>
+              </div>
             </div>
+            <!-- //////////////////////////////2 DIV END END END////////////////////// -->
+            <!-- /////////////////////////////////////////////////DIV 3 START//////////////////// -->
             <div class="info-item">
               <img
                 class="info-servis-img"
@@ -227,10 +324,48 @@
                 alt="ellips"
               />
               <p class="primary-info-text">Дизайн десктопной версии</p>
-              <svg class="primary-info-svg">
-                <use href="./symbol-defs.svg#icon-Vector"></use>
-              </svg>
+              <button
+                type="button"
+                class="button-info"
+                data-info-button3
+                aria-expanded="false"
+                aria-control="div3"
+              >
+                <svg data-button class="primary-info-svg">
+                  <use href="./symbol-defs.svg#icon-Vector"></use>
+                </svg>
+              </button>
+              <div id="div3 is-open" data-info3 class="info-item-secondary">
+                <button
+                  type="button"
+                  class="button-info"
+                  data-button3-closed
+                  aria-expanded="false"
+                  aria-control="div3"
+                >
+                  <svg data-button class="primary-info-svg">
+                    <use href="./symbol-defs.svg#icon-Vector"></use>
+                  </svg>
+                </button>
+
+                <div class="inform-div3">
+                  <img
+                    class="inform-div3-img"
+                    src="./images/main/Ellipse5.png"
+                    alt="ellipse5"
+                  />
+                  <p class="info-text-secondary">Дизайн десктопной версии</p>
+                </div>
+                <p class="info-paragraph-secondary border">
+                  Десктопную версию сайта просматривают пользователи со
+                  стационарных компьютеров. Основная цель: посерфить, углубиться
+                  в детали, получить больше информации, сравнить, выбрать,
+                  прицениться.
+                </p>
+              </div>
             </div>
+            <!-- //////////////////////////////3 DIV END END END////////////////////// -->
+            <!-- ///////////////////////////////////4 DIV START/////////////////////// -->
             <div class="info-item">
               <img
                 class="info-servis-img"
@@ -240,10 +375,48 @@
                 alt="ellips"
               />
               <p class="primary-info-text">Пользовательский интерфейс</p>
-              <svg class="primary-info-svg">
-                <use href="./symbol-defs.svg#icon-Vector"></use>
-              </svg>
+              <button
+                type="button"
+                class="button-info"
+                data-info-button4
+                aria-expanded="false"
+                aria-control="div4"
+              >
+                <svg data-button class="primary-info-svg">
+                  <use href="./symbol-defs.svg#icon-Vector"></use>
+                </svg>
+              </button>
+              <div id="div4 is-open" data-info4 class="info-item-secondary">
+                <button
+                  type="button"
+                  class="button-info"
+                  data-button4-closed
+                  aria-expanded="false"
+                  aria-control="div4"
+                >
+                  <svg data-button class="primary-info-svg">
+                    <use href="./symbol-defs.svg#icon-Vector"></use>
+                  </svg>
+                </button>
+
+                <div class="inform-div4">
+                  <img
+                    class="inform-div4-img"
+                    src="./images/main/Ellipse5.png"
+                    alt="ellipse5"
+                  />
+                  <p class="info-text-secondary">Пользовательский интерфейс</p>
+                </div>
+                <p class="info-paragraph-secondary border">
+                  Цель дизайна пользовательского интерфейса - сделать
+                  взаимодействие максимально простым и эффективным, насколько
+                  это возможно, с точки зрения достижения целей пользователя.
+                </p>
+              </div>
             </div>
+            <!-- /////////////////////////////////4 DIV END END ////////////////////// -->
+            <!-- ///////////////////////////5 DIV START //////////////////// -->
+
             <div class="info-item">
               <img
                 class="info-servis-img"
@@ -253,10 +426,48 @@
                 alt="ellips"
               />
               <p class="primary-info-text">Микро UX</p>
-              <svg class="primary-info-svg">
-                <use href="./symbol-defs.svg#icon-Vector"></use>
-              </svg>
+              <button
+                type="button"
+                class="button-info"
+                data-info-button5
+                aria-expanded="false"
+                aria-control="div5"
+              >
+                <svg data-button class="primary-info-svg">
+                  <use href="./symbol-defs.svg#icon-Vector"></use>
+                </svg>
+              </button>
+              <div id="div5 is-open" data-info5 class="info-item-secondary">
+                <button
+                  type="button"
+                  class="button-info"
+                  data-button5-closed
+                  aria-expanded="false"
+                  aria-control="div5"
+                >
+                  <svg data-button class="primary-info-svg">
+                    <use href="./symbol-defs.svg#icon-Vector"></use>
+                  </svg>
+                </button>
+
+                <div class="inform-div5">
+                  <img
+                    class="inform-div5-img"
+                    src="./images/main/Ellipse5.png"
+                    alt="ellipse5"
+                  />
+                  <p class="info-text-secondary">Микро UX</p>
+                </div>
+                <p class="info-paragraph-secondary border">
+                  Микро-анимация может изменить восприятие продукта,
+                  пользовательское поведение и повысить конверсию. Небольшие,
+                  преимущественно функциональные анимации поддерживают
+                  пользователя: обеспечивают визуальную обратную связь и более
+                  понятно отражают происходящие изменения.
+                </p>
+              </div>
             </div>
+            <!-- //////////////////////////5 DIV END END ///////////// -->
           </div>
           <div class="development">
             <img
@@ -267,65 +478,375 @@
             <div class="development-item">
               <p class="development-text">Этапы разработки интернет-магазина</p>
             </div>
-            <div class="development-secondary-item">
-              <p class="development-secondary-text">1. Анализ</p>
-              <p class="development-secondary-paragraph">
-                Для того, чтобы онлайн-магазин приносил выгоду, перед его
-                запуском необходимо провести анализ других предложений рынка,
-                оценить конкурентов и найти наиболее удобное решение.
-              </p>
-              <img
-                class="development-primary-img"
-                src="./images/development/Top-Right.png"
-                alt="kvadrat"
-              />
-              <div class="development-groupe">
-                <img src="./images/development/GroupL104.png" alt="button" />
-                <img src="./images/development/GroupR70.png" alt="button" />
+            <div class="slider">
+              <div class="slider-line">
+                <!-- //////////////////////1 DIV PAGINATION START/////////////////////////// -->
+                <div class="development-secondary-item">
+                  <p class="development-secondary-text">1. Анализ</p>
+                  <p class="development-secondary-paragraph">
+                    Для того, чтобы онлайн-магазин приносил выгоду, перед его
+                    запуском необходимо провести анализ других предложений
+                    рынка, оценить конкурентов и найти наиболее удобное решение.
+                  </p>
+                  <img
+                    class="development-primary-img"
+                    srcset="
+                      ./images/development/Top-Right.png    1x,
+                      ./images/development/Top-Right@2x.png 2x,
+                      ./images/development/Top-Right@3x.png 3x
+                    "
+                    src="./images/development/Top-Right.png"
+                    alt="kvadrat"
+                  />
+                </div>
+                <!-- ////////////////////////////////1 DIV PAGINATION END///////////////// -->
+                <!-- //////////////////////////////////////////2 DIV PAGINATION START////////////////// -->
+
+                <div class="development-secondary-item">
+                  <p class="development-secondary-text">
+                    2. Визуальное решение
+                  </p>
+                  <p class="development-secondary-paragraph">
+                    Разработка дизайна ключевых страниц магазина – главная,
+                    каталог, информационные разделы, раздел корзины, товаров.
+                    Для нас главное – передать настроение бренда, сделать
+                    удобный сайт.
+                  </p>
+                  <img
+                    srcset="
+                      ./images/development/2step.png    1x,
+                      ./images/development/2step@2x.png 2x,
+                      ./images/development/2step@3x.png 3x
+                    "
+                    class="development-primary-img"
+                    src="./images/development/2step.png"
+                    alt="kvadrat"
+                  />
+                </div>
+                <!-- ////////////////////////////////2 DIV PAGINATION END///////////////// -->
+                <!-- //////////////////////////////////////////3 DIV PAGINATION START////////////////// -->
+                <div class="development-secondary-item">
+                  <p class="development-secondary-text">
+                    3. Техническая реализация
+                  </p>
+                  <p class="development-secondary-paragraph">
+                    После утверждения дизайн-макета наступает следующий этап –
+                    верстка. Это трудоемкий процесс: программисты должны все
+                    тщательно прописать, чтобы не допустить технических ошибок.
+                  </p>
+                  <img
+                    srcset="
+                      ./images/development/3step.png    1x,
+                      ./images/development/3step@2x.png 2x,
+                      ./images/development/3step@3x.png 3x
+                    "
+                    class="development-primary-img"
+                    src="./images/development/3step.png"
+                    alt="kvadrat"
+                  />
+                </div>
+                <!-- ////////////////////////////////3 DIV PAGINATION END///////////////// -->
+                <!-- //////////////////////////////////////////4 DIV PAGINATION START////////////////// -->
+                <div class="development-secondary-item">
+                  <p class="development-secondary-text">
+                    4. Наполнение контентом
+                  </p>
+                  <p class="development-secondary-paragraph">
+                    Создание и публикация текстов, а также видео материала.
+                    Хороший контент и качественные фотографии привлекают больше
+                    посетителей и помогают клиенту лучше ознакомиться с
+                    ассортиментом.
+                  </p>
+                  <img
+                    srcset="
+                      ./images/development/Group176.png    1x,
+                      ./images/development/Group176@2x.png 2x,
+                      ./images/development/Group176@3x.png 3x
+                    "
+                    class="development-primary-img"
+                    src="./images/development/Group176.png"
+                    alt="kvadrat"
+                  />
+                </div>
+                <!-- ////////////////////////////////4 DIV PAGINATION END///////////////// -->
+                <!-- //////////////////////////////////////////5 DIV PAGINATION START////////////////// -->
+
+                <div class="development-secondary-item">
+                  <p class="development-secondary-text">5. Тестирование</p>
+                  <p class="development-secondary-paragraph">
+                    Составление плана тестирования для определения ошибок.
+                    Проверка работы сайта и визуального восприятия для улучшения
+                    сайта. Также используются чек-листы для четкого определения
+                    ошибок и их устранения.
+                  </p>
+                  <img
+                    srcset="
+                      ./images/development/Group177.png    1x,
+                      ./images/development/Group177@2x.png 2x,
+                      ./images/development/Group177@3x.png 3x
+                    "
+                    class="development-primary-img"
+                    src="./images/development/Group176.png"
+                    alt="kvadrat"
+                  />
+                </div>
+                <!-- <div id="pagination-container"></div> -->
+                <!-- ////////////////////////////////5 DIV PAGINATION END///////////////// -->
               </div>
+            </div>
+
+            <div class="development-groupe">
+              <button class="slider-prev">
+                <img src="./images/development/GroupL104.png" alt="button" />
+              </button>
+              <button class="slider-next">
+                <img src="./images/development/GroupR70.png" alt="button" />
+              </button>
             </div>
           </div>
         </div>
         <div class="examples">
           <p class="examples-text">Примеры онлайн-магазинов</p>
-          <img
-            class="examples-img"
-            srcset="
-              ./images/examples/magopt.jpg    1x,
-              ./images/examples/magopt@2x.jpg 2x,
-              ./images/examples/magopt@3x.jpg 3x
-            "
-            src="./images/examples/magopt.jpg"
-            alt="magazine-opt"
-          />
-          <img
-            class="examples-img"
-            srcset="
-              ./images/examples/magpari.jpg    1x,
-              ./images/examples/magpari@2x.jpg 2x,
-              ./images/examples/magpari@3x.jpg 3x
-            "
-            src="./images/examples/magpari.jpg"
-            alt="magazine-hairdresser"
-          />
-          <img
-            class="examples-img"
-            srcset="
-              ./images/examples/magkond.jpg    1x,
-              ./images/examples/magkond@2x.jpg 2x,
-              ./images/examples/magkond@3x.jpg 3x
-            "
-            src="./images/examples/magkond.jpg"
-            alt="magazine-
-            confectioner"
-          />
+          <div class="slider-examples">
+            <div class="slider-examples-line">
+              <div class="div">
+                <img
+                  class="examples-img"
+                  srcset="
+                    ./images/examples/magopt.jpg    1x,
+                    ./images/examples/magopt@2x.jpg 2x,
+                    ./images/examples/magopt@3x.jpg 3x
+                  "
+                  src="./images/examples/magopt.jpg"
+                  alt="magazine-opt"
+                />
+                <img
+                  class="examples-img"
+                  srcset="
+                    ./images/examples/magpari.jpg    1x,
+                    ./images/examples/magpari@2x.jpg 2x,
+                    ./images/examples/magpari@3x.jpg 3x
+                  "
+                  src="./images/examples/magpari.jpg"
+                  alt="magazine-hairdresser"
+                />
+                <img
+                  class="examples-img"
+                  srcset="
+                    ./images/examples/magkond.jpg    1x,
+                    ./images/examples/magkond@2x.jpg 2x,
+                    ./images/examples/magkond@3x.jpg 3x
+                  "
+                  src="./images/examples/magkond.jpg"
+                  alt="magazine-
+                       confectioner"
+                />
+              </div>
+              <!-- ///////////////// -->
+              <div class="div2">
+                <img
+                  class="examples-img"
+                  srcset="
+                    ./images/examples/magflor.jpg    1x,
+                    ./images/examples/magflor@2x.jpg 2x,
+                    ./images/examples/magflor@3x.jpg 3x
+                  "
+                  src="./images/examples/magаflor.jpg"
+                  alt="magazine-confectioner"
+                />
+                <img
+                  class="examples-img"
+                  srcset="
+                    ./images/examples/magviza.jpg    1x,
+                    ./images/examples/magviza@2x.jpg 2x,
+                    ./images/examples/magviza@3x.jpg 3x
+                  "
+                  src="./images/examples/magviza.jpg"
+                  alt="magazine-
+                confectioner"
+                />
+                <img
+                  class="examples-img"
+                  srcset="
+                    ./images/examples/maghud.jpg    1x,
+                    ./images/examples/maghud@2x.jpg 2x,
+                    ./images/examples/maghud@3x.jpg 3x
+                  "
+                  src="./images/examples/maghud.jpg"
+                  alt="magazine-
+                  confectioner"
+                />
+              </div>
+              <!-- ///////////////// -->
+            </div>
+          </div>
+          <!-- //////////////////BTN SLIDER-EXAMPLES/////////////// -->
           <div class="examples-groupe">
-            <img src="./images/development/GroupL104.png" alt="button" />
-            <img src="./images/development/GroupR70.png" alt="button" />
+            <button class="slider-examples-prev">
+              <img
+                src="./images/development/GroupL104.png"
+                alt="button-examples"
+              />
+            </button>
+            <button class="slider-examples-next">
+              <img
+                src="./images/development/GroupR70.png"
+                alt="button-examples"
+              />
+            </button>
           </div>
         </div>
+        <!-- //////////////////BTN SLIDER-EXAMPLES/////////////// -->
+
+        <div class="inform">
+          <img
+            class="inform-secondary-img"
+            src="./images/inform/shape-sphere.269.png"
+            alt="sphere"
+          />
+          <p class="inform-text">Необходимо больше информации?</p>
+          <img
+            class="inform-img"
+            srcset="
+              ./images/inform/Group155.png    1x,
+              ./images/inform/Group155@2x.png 2x,
+              ./images/inform/Group155@3x.png 3x
+            "
+            src="./images/inform/Group155.png"
+            alt="magazine-
+           confectioner"
+          />
+        </div>
+        <p class="inform-primary-text">
+          Если Вы владелец онлайн-магазина или только начинаете свой путь в
+          электронной коммерции и вам нужен уникальный дизайн онлайн магазина
+          для стартапа, обратитесь к нашему веб дизайнеру. За выгодную цену и
+          короткий период времени, он поможет визуализировать ваш веб-проект.
+        </p>
+        <button class="primary-button-inform" type="button">
+          <span class="primary-button-text">Оставить заявку</span>
+        </button>
+        <div class="discussion">
+          <p class="discussion-text">Обсудить проект</p>
+          <p class="discussion-primary-text">
+            Расскажите о своих бизнес-целях и мы поможем вам в их достижении
+          </p>
+          <form class="inform-subscription">
+            <input
+              class="inform-input"
+              type="text"
+              name="name"
+              placeholder="Имя"
+              required
+            />
+            <input
+              class="inform-input"
+              type="number"
+              name="net"
+              placeholder="Telegram/Viber"
+              required
+              min="5"
+              max="10"
+            />
+            <input
+              class="inform-input"
+              type="email"
+              name="E-mail"
+              placeholder="Email"
+              required
+            />
+          </form>
+          <button class="primary-button-inform" type="submit">
+            <span class="primary-button-text">Отправить</span>
+          </button>
+          <img
+            class="inform-img"
+            srcset="
+              ./images/discussion/Postpaid.png 1x,
+              ./images/discussion/Postpaid.png 2x,
+              ./images/discussion/Postpaid.png 3x
+            "
+            src="./images/discussion/Postpaid.png"
+            alt="magazine-
+          confectioner"
+          />
+        </div>
       </main>
+      <footer>
+        <div class="footer-inform">
+          <svg class="footer-leftVector">
+            <use href="./sprites.svg#icon-LeftVector"></use>
+          </svg>
+          <svg class="footer-rv">
+            <use href="./sprites.svg#icon-Vector-rignth"></use>
+          </svg>
+          <svg class="footer-lv">
+            <use href="./sprites.svg#icon-Vector-left"></use>
+          </svg>
+          <svg class="footer-RignthVector">
+            <use href="./sprites.svg#icon-RignthVector"></use>
+          </svg>
+          <a class="footer-text" href="./index.html"><span>DEVELOPERS</span></a>
+        </div>
+        <div class="footer-contact">
+          <ul class="footer-list">
+            <li class="footer-item">
+              <svg class="footer-svg">
+                <use href="./symbol-defs.svg#icon-viber"></use>
+              </svg>
+              <p class="footer-paragraph">Валерия</p>
+              <a class="footer-number" href="tel=+79805585949">+79805585949</a>
+            </li>
+            <li class="footer-item">
+              <svg class="footer-svg">
+                <use href="./symbol-defs.svg#icon-viber"></use>
+              </svg>
+              <p class="footer-paragraph-anna">Анна</p>
+              <a class="footer-number" href="+79805585949">+79805585949</a>
+            </li>
+            <li class="footer-item">
+              <svg class="footer-svg">
+                <use href="./symbol-defs.svg#icon-viber"></use>
+              </svg>
+              <p class="footer-paragraph">Валерия</p>
+              <a class="footer-number" href="+79805585949">+79805585949</a>
+            </li>
+          </ul>
+          <div class="footer-social">
+            <svg width="15.63" height="30.70" class="footer-svg-social">
+              <use href="./symbol-defs.svg#icon-fb"></use>
+            </svg>
+            <svg width="32.97" height="27" class="footer-svg-social">
+              <use href="./symbol-defs.svg#icon-tg"></use>
+            </svg>
+            <svg width="32.84" height="34" class="footer-svg-social">
+              <use href="./symbol-defs.svg#icon-viber"></use>
+            </svg>
+            <svg width="27.82" height="28" class="footer-svg-social">
+              <use href="./symbol-defs.svg#icon-insta"></use>
+            </svg>
+            <svg width="31.85" height="32" class="footer-svg-social">
+              <use href="./symbol-defs.svg#icon-whatsapp"></use>
+            </svg>
+          </div>
+          <div class="footer-email">
+            <a class="footer-link" href="mailto:hr@d-vs.com"
+              ><span>hr@d-vs.com</span></a
+            >
+          </div>
+          <div class="fin">
+            <p>Developers 2018-2021 All rights reserved</p>
+          </div>
+        </div>
+      </footer>
     </div>
-    <script src="./index.js"></script>
+    <script src="./mobileMenu.js"></script>
+    <script src="./js/bnt1.js"></script>
+    <script src="./js/bnt2.js"></script>
+    <script src="./js/bnt3.js"></script>
+    <script src="./js/bnt4.js"></script>
+    <script src="./js/bnt5.js"></script>
+    <script src="./js/pagination.js"></script>
+    <script src="./js/pagination-examples.js"></script>
   </body>
 </html>
