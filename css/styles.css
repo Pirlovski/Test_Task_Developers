@@ -771,6 +771,9 @@ top: 84px; */
 .border {
   border-left: 1px solid #000000;
 }
+.inform-wrapper {
+  text-align: center;
+}
 .inform-div1 {
   display: flex;
   align-items: center;
