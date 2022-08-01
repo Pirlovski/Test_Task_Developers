@@ -1,19 +1,25 @@
 (() => {
-  const infoBtnRef = document.querySelector("[data-info-button2]");
-  const mobileMenuRef = document.querySelector("[data-info2]");
-  const btn = document.querySelector("[data-button2-closed]");
+  const infoBtnRef2 = document.querySelector("[data-info-button2]");
+  const mobileMenuRef2 = document.querySelector(".info-item2");
+  const cirkle2 = document.querySelector(".cirkle2");
+  const svg2 = document.querySelector("[data-button2]");
 
-  infoBtnRef.addEventListener("click", () => {
+  infoBtnRef2.addEventListener("click", () => {
     const expanded =
-      infoBtnRef.getAttribute("aria-expanded") === "true" || false;
-    infoBtnRef.classList.toggle("is-open");
-    infoBtnRef.setAttribute("aria-expanded", !expanded);
-    mobileMenuRef.classList.toggle("is-open");
-  });
-  btn.addEventListener("click", () => {
-    const expanded = btn.getAttribute("aria-expanded") === "true" || false;
-    btn.classList.toggle("is-open");
-    btn.setAttribute("aria-expanded", !expanded);
-    mobileMenuRef.classList.toggle("is-open");
+      infoBtnRef2.getAttribute("aria-expanded") === "true" || false;
+
+    mobileMenuRef2.classList.toggle("hidden");
+    infoBtnRef2.classList.toggle("indexSecondary");
+    cirkle2.classList.toggle("blue");
+    infoBtnRef2.classList.toggle("is-open");
+    svg2.classList.toggle("rotate");
+
+    infoBtnRef2.setAttribute("aria-expanded", !expanded);
+
+    mobileMenuRef2.classList.toggle("is-open");
+    console.log("Click");
+    console.log(mobileMenuRef2);
+    console.log(cirkle2);
+    console.log(infoBtnRef2);
   });
 })();

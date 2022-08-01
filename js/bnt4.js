@@ -1,19 +1,24 @@
 (() => {
-  const infoBtnRef = document.querySelector("[data-info-button4]");
-  const mobileMenuRef = document.querySelector("[data-info4]");
-  const btn = document.querySelector("[data-button4-closed]");
+  const infoBtnRefd4 = document.querySelector("[data-info-button4]");
+  const mobileMenuRefd4 = document.querySelector(".info-item4");
+  const cirkled4 = document.querySelector(".cirkle4");
+  const svg4 = document.querySelector("[data-button4]");
 
-  infoBtnRef.addEventListener("click", () => {
+  infoBtnRefd4.addEventListener("click", () => {
     const expanded =
-      infoBtnRef.getAttribute("aria-expanded") === "true" || false;
-    infoBtnRef.classList.toggle("is-open");
-    infoBtnRef.setAttribute("aria-expanded", !expanded);
-    mobileMenuRef.classList.toggle("is-open");
-  });
-  btn.addEventListener("click", () => {
-    const expanded = btn.getAttribute("aria-expanded") === "true" || false;
-    btn.classList.toggle("is-open");
-    btn.setAttribute("aria-expanded", !expanded);
-    mobileMenuRef.classList.toggle("is-open");
+      infoBtnRefd4.getAttribute("aria-expanded") === "true" || false;
+
+    mobileMenuRefd4.classList.toggle("hidden");
+    infoBtnRefd4.classList.toggle("indexSecondary");
+    cirkled4.classList.toggle("blue");
+    infoBtnRefd4.classList.toggle("is-open");
+    svg4.classList.toggle("rotate");
+    infoBtnRefd4.setAttribute("aria-expanded", !expanded);
+
+    mobileMenuRefd4.classList.toggle("is-open");
+    console.log("Click");
+    console.log(mobileMenuRefd4);
+    console.log(cirkled4);
+    console.log(infoBtnRefd4);
   });
 })();
